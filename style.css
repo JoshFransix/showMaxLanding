@@ -42,7 +42,8 @@ a {
   margin: auto;
 }
 
-.cta {
+/* Changes here */
+.nav-content .cta {
   position: absolute;
   right: 5%;
   top: 30%;
@@ -73,17 +74,21 @@ a {
 
 }
 
+/* CHanges here */
 #intro {
   position: relative;
   background: #18171F;
-  padding-top: 6rem;
-  height: 80vh;
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+  /* height: 80vh; */
   color: #fff;
 }
 
+/* Changes here */
 .intro-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 90%;
   margin: auto;
 }
@@ -131,7 +136,13 @@ a {
 }
 
 .intro-img {
-  margin-right: -4rem;
+  margin-right: 0rem;
+
+}
+
+.intro-img img {
+  width: 100%;
+  height: 100%;
 }
 
 .pink-text {
@@ -217,6 +228,11 @@ a {
   color: #fff;
 }
 
+.offers-content .light-blue-btn {
+  background-color: #00B7DD;
+  color: #fff;
+}
+
 .offers-content span {
   margin-bottom: 2rem;
   font-size: 100%;
@@ -295,6 +311,13 @@ a {
   margin: auto;
 }
 
+.more-specials .left-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
 .more-specials .text {
   width: 50%;
   font-size: 90%;
@@ -340,14 +363,14 @@ a {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0rem 2rem;
+  display: flex;
+  justify-content: space-between;
   width: 94%;
   margin: auto;
 }
 
 .grid .text {
+  width: 50%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -415,8 +438,12 @@ a {
 
 
 @media screen and (max-width: 1330px) {
+  #intro .intro-content {
+    margin-top: 0rem;
+  }
+
   .intro-text {
-    width: 100%;
+    width: 48%;
   }
 
   .intro-text h1 {
@@ -428,7 +455,7 @@ a {
   }
 
   .intro-cta {
-    width: 100%;
+    width: 80%;
   }
 
   .intro-text span {
@@ -436,14 +463,7 @@ a {
     font-size: 120%;
   }
 
-  .intro-img {
-    /* margin-right: -2rem; */
-    width: 50%;
-  }
 
-  .intro-img img {
-    width: 930px;
-  }
 
   .brands-content {
     width: 100%;
@@ -451,7 +471,13 @@ a {
   }
 
   .brands-content img {
-    margin-right: 2rem;
+    margin-left: 4rem;
+    width: 250%;
+    scale: 1.2;
+  }
+
+  .offer-right {
+    padding-top: 6rem;
   }
 
   .more-specials .content {
@@ -475,7 +501,17 @@ a {
   .more-specials .more-cta {
     margin-left: .4rem;
     width: 17%;
-    font-size: 100%;
+    font-size: 70%;
+    padding: 1rem 0;
+  }
+
+  .grid .text h1 {
+    font-size: 150%;
+    margin-bottom: 1rem;
+  }
+
+  .grid .text p {
+    font-size: 130%;
   }
 
   .footer-content {
@@ -492,4 +528,187 @@ a {
     margin-bottom: 2rem;
   }
 
+}
+
+@media screen and (max-width: 1120px) {
+  #navbar {
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+  }
+
+  .logo svg {
+    width: 60%;
+    height: 60%;
+  }
+
+  .nav-content .cta {
+    top: 0;
+  }
+
+  .nav-content .cta a {
+    font-size: 90%;
+    padding: .4rem;
+  }
+
+  .intro-content {
+    flex-direction: column-reverse;
+    width: 90%;
+    margin: auto;
+  }
+
+  .intro-text {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-cta {
+    width: 40%;
+  }
+
+  .offers-content .offers-btn {
+    bottom: 15%;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    font-size: 110%;
+  }
+
+
+  .grid {
+    grid-template-columns: 100%;
+    grid-gap: 0rem 0rem;
+    width: 94%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .grid .text {
+    width: 80%;
+  }
+
+  .gridTwo,
+  .gridFour {
+    flex-direction: column-reverse;
+  }
+
+  .more-specials .content {
+    flex-direction: column;
+    width: 97%;
+    padding-bottom: 2rem;
+  }
+
+  .more-specials .left-content {
+    width: 100%;
+  }
+
+  .more-specials .text {
+    width: 60%;
+    font-size: 90%;
+  }
+
+  .footer-content {
+    width: 95%;
+  }
+
+  .footer-content .links {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .offers-content {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .offers-content .offers-btn {
+    bottom: 15%;
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    margin-top: 0;
+  }
+
+  .offer-left,
+  .offer-center,
+  .offer-right {
+    padding: 2.7rem 2rem 6rem 2rem;
+    font-size: 90%;
+  }
+
+  .offers-content span {
+    margin-bottom: 0rem;
+    font-size: 120%;
+  }
+
+  .offers-content h1 {
+    margin-bottom: 2rem;
+  }
+
+  .more-specials .left-content {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .more-specials .text {
+    width: 100%;
+    font-size: 90%;
+  }
+
+  .more-specials .more-cta {
+    margin-left: 0rem;
+    padding: 1.1rem;
+    width: 40%;
+  }
+
+  .left-content .dstvMaster {
+    margin: 1.5rem 0;
+  }
+
+  .left-content .dstvMaster img {
+    scale: .8;
+  }
+
+  .footer-content {
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  .footer-content .links {
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+  }
+
+  .footer-content span {
+    margin-left: 1rem;
+
+  }
+
+  .footer-content .links a {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width:630px) {
+  .nav-content .cta .light-btn {
+    display: none;
+  }
+
+  .intro-content {
+    font-size: 90%;
+  }
+
+  .intro-content .intro-cta {
+    width: 60%;
+  }
+
+  .offers-content .offers-btn {
+    width: 58%;
+  }
 }
